@@ -17,7 +17,7 @@ export FLASK_ENV=development   # optional สำหรับ debug
 # ติดตั้ง DB
 flask initdb
 
-#วิธี Run
+# วิธี Run
 flask run
 # หรือ
 python app.py

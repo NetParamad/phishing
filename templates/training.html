@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Training — Phishing Awareness</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main>
+    <h2>การรู้เท่าทัน Phishing </h2>
+    <article>
+      <h3>สัญญาณเตือนที่ควรรู้</h3>
+      <ul>
+        <li>ผู้ส่งไม่ตรงกับโดเมน</li>
+        <li>ข้อความกดดันให้ทำทันที</li>
+        <li>ลิงก์ไม่ตรงกับข้อความที่แสดง</li>
+        <li>ไฟล์แนบไม่คาดคิด</li>
+      </ul>
+      <h3>แนวปฏิบัติ</h3>
+      <ul>
+        <li>อย่าใช้รหัสผ่านซ้ำ</li>
+        <li>เปิดใช้งาน MFA</li>
+        <li>รายงานอีเมลสงสัยทันที</li>
+      </ul>
+    </article>
+
+    <form method="post" action="{{ url_for('training_complete') }}">
+      <h3>แบบทดสอบสั้น</h3>
+      <label>อีเมลของคุณ (เพื่อบันทึกผล): <input name="email" type="email" required></label>
+      <p>คำถาม: ถ้าคุณเห็นอีเมลขอ OTP ผ่านอีเมล คุณควรทำอย่างไร?</p>
+      <select name="q1">
+        <option value="a">ส่ง OTP ให้</option>
+        <option value="b">ไม่ส่ง และยืนยันกับฝ่าย IT</option>
+        <option value="c">ตอบกลับเพื่อขอข้อมูลเพิ่มเติม</option>
+      </select>
+      <p><button type="submit">ส่งผล</button></p>
+    </form>
+
+    <p><a href="{{ url_for('index') }}">กลับหน้าหลัก</a></p>
+  </main>
+</body>
+</html>

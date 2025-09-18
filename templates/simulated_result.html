@@ -1,0 +1,10 @@
+<!doctype html><head><meta charset="utf-8"><title>Simulation Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"></head><body>
+  <main>
+    <h2>นี่เป็นการจำลองเพื่อการฝึก (Simulation)</h2>
+    <p>token: {{ token }}<br>
+       ผู้ที่คลิก: {{ participant or "ไม่ระบุ" }}</p>
+    <p>คำแนะนำ: หากคุณคลิกโดยไม่แน่ใจ ให้อ่านบทเรียนเพื่อเรียนรู้วิธีป้องกัน</p>
+    <a href="{{ url_for('training') }}">ไปที่บทเรียน</a>
+  </main>
+</body></html>

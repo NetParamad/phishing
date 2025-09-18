@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 24px; color: #222; }
+header h1 { font-size: 20px; }
+.btn { display:inline-block; margin:6px; padding:8px 12px; background:#1976d2; color:#fff; text-decoration:none; border-radius:6px; }
+.flashes li { list-style:none; padding:6px; margin:6px 0; border-radius:4px; }
+.success { background:#e6f4ea; color:#1b5e20; }
+.danger { background:#fdecea; color:#b71c1c; }
+table { border-collapse:collapse; width:100%; margin-top:12px; }
+table td, table th { border:1px solid #ddd; padding:6px; }

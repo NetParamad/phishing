@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Security Training Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header><h1>Security Training — Phishing Awareness (Non-deceptive)</h1></header>
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for cat, msg in messages %}
+            <li class="{{cat}}">{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <section>
+      <p>เว็บไซต์นี้เป็นเครื่องมือฝึกอบรมเพื่อเสริมความตระหนักรู้เรื่อง Phishing ภายในองค์กร</p>
+      <a class="btn" href="{{ url_for('training') }}">เริ่มการทดลอง </a>
+      <a class="btn" href="{{ url_for('report') }}">รายงานอีเมลต้องสงสัย</a>
+      <a class="btn" href="{{ url_for('admin') }}">หน้าผู้ดูแล (Admin)</a>
+    </section>
+  </main>
+  <footer>© Training — โปรดขออนุญาตก่อนใช้งานจริง</footer>
+</body>
+</html>
